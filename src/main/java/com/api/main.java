@@ -1,3 +1,4 @@
+package com.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -5,8 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
-import entity.City;
-import entity.MyCity;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import error.ApiError;
 import org.json.JSONObject;
@@ -35,7 +35,7 @@ public class main {
 
         String resu = "";
         for (int i = 0;i<json.getJSONArray("results").length();i++) {
-            String resultado = ("peliculas:" + json.getJSONArray("results").getJSONObject(i).get("title"));
+            String resultado = ("" + json.getJSONArray("results").getJSONObject(i).get("title"));
             resu += resultado+"\n";
 
         }
